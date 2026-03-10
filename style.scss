@@ -1,15 +1,9 @@
 @import './styles/base.scss';
 
-:root {
-  --primary-color: limegreen;
-  --duration: 1s;
-  --easing: cubic-bezier(0.5, 0, 0.5, 1);
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   padding: 5vmin;
-  background-color: white;
+  background-color: #f4f4f4;
 }
 
 a {
@@ -18,7 +12,6 @@ a {
 
 h1 {
   margin: 0;
-  color: var(--primary-color);
 }
 
 small {
@@ -34,22 +27,5 @@ ul {
   height: 5vmin;
   width: 5vmin;
   border-radius: 50%;
-  left: 50vw;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
-
-  --duration: 1s;
-  --stagger: 0.5s;
-  --interval: calc(var(--duration) - var(--stagger));
-
-  animation: move-right var(--duration) calc(var(--interval) * var(--i)) both;
-
-}
-
-@keyframes move-right {
-  from {
-    transform: none;
-  }
-  to {
-    transform: translateX(25vw);
-  }
 }

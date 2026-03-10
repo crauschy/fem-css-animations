@@ -34,20 +34,18 @@ body {
     --color: var(--color-blue);
   }
 
-  --stagger: .6s;
-  --interval: calc(var(--animation-duration) - var(--stagger));
   animation: slide-up var(--animation-duration) var(--transition-easing);
 
   > .ui-input,
   > .ui-button {
-    animation: slide-up var(--animation-duration) var(--transition-easing) both;
+    // Add animations here
   }
 
   > .ui-input {
-    animation-delay: calc(var(--interval) * var(--i));
+    // ...
   }
   > .ui-button {
-    animation-delay: calc(var(--interval) * var(--i));
+    // ...
   }
 }
 
