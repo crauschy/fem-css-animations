@@ -27,7 +27,24 @@
         <li><a href="/06-reactive/">Reactive Animations</a></li>
         <li><a href="/examples/inflight/">Inflight Example</a></li>
       </ul>
-      <div class="ball"></div>
+      <div>
+        <div class="ball" style="--i: 1"></div>
+        <div class="ball" style="--i: 2"></div>
+        <div class="ball" style="--i: 3"></div>
+        <div class="ball" style="--i: 4"></div>
+        <div class="ball" style="--i: 5"></div>
+        <div class="ball" style="--i: 6"></div>
+        <div class="ball" style="--i: 7"></div>
+      </div>
     </div>
   </body>
+  <script>
+    document.body.addEventListener('click', (event) => {
+      if (document.body.style.getPropertyValue('--primary-color') === 'limegreen') {
+      document.body.style.setProperty('--primary-color', 'grey');
+      } else {
+        document.body.style.setProperty('--primary-color', 'limegreen');
+      }
+    })
+  </script>
 </html>
